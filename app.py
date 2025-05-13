@@ -358,8 +358,8 @@ def before_first_request():
 @app.route('/')
 def index():
     """Main landing page with Square payment button."""
-    # Replace with your actual Square payment link
-    square_payment_link = os.getenv('SQUARE_PAYMENT_LINK', 'https://checkout.square.site/your-payment-link')
+    # Use the provided Square payment link
+    square_payment_link = os.getenv('SQUARE_PAYMENT_LINK', 'https://square.link/u/OPz9UZRH')
     return render_template_string(INDEX_HTML, square_payment_link=square_payment_link)
 
 @app.route('/success', methods=['GET'])
